@@ -1,0 +1,80 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 15px;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Add more styling here for links, layout, and responsiveness */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+    }
+}
+
+.underline-name {
+    text-decoration: underline;
+}
+
+/* bold and underline */
+
+.bold-underline-name {
+    font-weight: bold;
+    text-decoration: underline;
+}
