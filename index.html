@@ -3,77 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanjay Krishna Gouda</title>
+    <title>Sanjay Krishna Gouda | AI Researcher</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header id="header"></header>
+
     <main>
-        <section id="about">
-            <img src="me.jpg" alt="Sanjay Krishna Gouda" class="profile-image">
-            <h1>About Me</h1>
-            <p>I lead responsible AI research for Q-IDE (previously - Amazon CodeWhisperer). I also research long context training and inference methods for large language models.
-                Previously, I have built neural and statistical methods for machine translation and cross-lingual information retrieval at Raytheon BBN Technologies.
-                I have over 5 years of experience in building and deploying complex machine learning solutions ranging from algorithm research to end to end pipeline design.</p>
-        </section>
-        <section id="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li>
-                    <p><strong> Applied Scientist - Amazon Web Services</strong> (Jan 2022 - present)</p>
-                </li>
-                <li>
-                    <p><strong>Research Engineer/Staff Scientist - Raytheon BBN Technologies</strong> (Jan 2019 - Jan 2022) </p>
-                </li>
-            </ul>
-        </section>
-        <section id="publications">
-            <h2>Publications</h2>
-            <ul>
-                <!--  -->
-                <li>
-                    <p><strong>Bifurcated Attention for Single-Context Large-Batch Sampling</strong> - Ben Athiwaratkun, Sujan Kumar Gonugondla, <span class="bold-underline-name">Sanjay Krishna Gouda</span> et al. "Bifurcated Attention for Single-Context Large-Batch Sampling" arXiv:2403.08845. <a href="https://arxiv.org/abs/2403.08845" target="_blank">Read More</a></p>
-                </li>
-                <li>
-                    <p><strong>Multi-lingual Evaluation of Code Generation Models</strong> - Ben Athiwaratkun <span class="bold-underline-name">Sanjay Krishna Gouda</span>, Zijian Wang, Xiaopeng Li, Yuchen Tian, Ming Tan, Wasi Uddin Ahmad et al. "Multi-lingual evaluation of code generation models." arXiv preprint arXiv:2210.14868 (2022). <a href="https://arxiv.org/abs/2210.14868" target="_blank">Read More</a></p>
-                    <p><a href="https://github.com/amazon-science/mxeval" target="_blank">Source Code</a> <a href="https://huggingface.co/mxeval" target="_blank">Dataset</a></p>
-                </li>
-                <li>
-                    <p><strong>Speech recognition: keyword spotting through image recognition</strong> - <span class="bold-underline-name">Gouda, Sanjay Krishna</span>, Salil Kanetkar, David Harrison, and Manfred K. Warmuth. "Speech recognition: keyword spotting through image recognition." arXiv preprint arXiv:1803.03759 (2018). <a href="https://arxiv.org/abs/1803.03759" target="_blank">Read More</a></p>
-                </li>
-                <li>
-                    <p><strong>Combining word embeddings and n-grams for unsupervised document summarization</strong> - Jiang, Zhuolin, Manaj Srivastava, Sanjay Krishna, David Akodes, and Richard Schwartz. "Combining word embeddings and n-grams for unsupervised document summarization." arXiv preprint arXiv:2004.14119 (2020). <a href="https://arxiv.org/abs/2004.14119" target="_blank">Read More</a></p>
-                </li>
-                <!-- Add more list items for additional publications -->
-            </ul>
-        </section>
-        <!-- <section id="projects">
-            <h2>Projects</h2>
-            <p>Placeholder text for projects.</p>
-        </section> -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>sanjaykrishna.gouda@gmail.com</p>
-        </section><br>
+        <section id="about" class="fade-in"></section>
+        <section id="experience" class="fade-in delay-2"></section>
+        <section id="publications" class="fade-in delay-3"></section>
+        <section id="contact" class="fade-in"></section>
     </main>
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/skgouda/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/SanjayKrishnaG9" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com/sanjay.krishna_" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-        <p>&copy; 2024 Sanjay Krishna Gouda</p>
-    </footer>
+
+    <footer id="footer"></footer>
+
+    <!-- Load scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/arxiv.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Debug console -->
+    <script>
+        console.log('Page loaded');
+    </script>
 </body>
 </html>
