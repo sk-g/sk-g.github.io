@@ -6,21 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM loaded, initializing components');
   
   // Load all components
-  loadComponent('header', 'components/header.html');
+  loadComponent('header', 'components/header.html').then(() => {
+    // Initialize dark mode after header is loaded
+    initDarkMode();
+  });
   loadComponent('about', 'components/about.html');
   loadComponent('experience', 'components/experience.html');
   loadComponent('publications', 'components/publications.html');
   loadComponent('contact', 'components/contact.html');
   loadComponent('footer', 'components/footer.html');
-  
-  // Initialize dark mode
-  initDarkMode();
 });
 
 /**
  * Load HTML component into a container
  * @param {string} id - ID of the container element
  * @param {string} url - URL of the component HTML file
+ * @returns {Promise} - Promise that resolves when the component is loaded
  */
 async function loadComponent(id, url) {
   try {
@@ -28,7 +29,7 @@ async function loadComponent(id, url) {
     const container = document.getElementById(id);
     if (!container) {
       console.error(`Container #${id} not found`);
-      return;
+      return Promise.reject(`Container #${id} not found`);
     }
     
     const response = await fetch(url);
@@ -41,8 +42,10 @@ async function loadComponent(id, url) {
     const event = new CustomEvent('componentLoaded', { detail: { id } });
     document.dispatchEvent(event);
     console.log(`Component loaded: ${id}`);
+    return Promise.resolve();
   } catch (error) {
     console.error(`Error loading component ${id}:`, error);
+    return Promise.reject(error);
   }
 }
 
@@ -56,12 +59,19 @@ function initDarkMode() {
     return;
   }
   
+  console.log('Dark mode toggle found, initializing');
+  
   // Check for saved theme preference or use system preference
   const savedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   
   if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
     document.body.classList.add('dark-mode');
+    const themeIcon = darkModeToggle.querySelector('i');
+    if (themeIcon) {
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+    }
   }
   
   // Toggle dark mode when the button is clicked
